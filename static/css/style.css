@@ -4,7 +4,82 @@
 	box-sizing: border-box;
 }
 
+body { overflow: hidden; }
+img { width: 100%; }
+
 .thumbnail {
 	height: 200px;
 	object-fit: cover;
 }
+
+.modal-dialog { margin: 5rem auto; }
+
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover { color: #000; }
+
+li {
+    padding: 0 !important;
+    background: linear-gradient(to right, #f7f7f7 50%, white 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    cursor: pointer; 
+    transition: all .5s ease-out;
+}
+
+li a { 
+    padding: .5rem 1rem; 
+    display: block; 
+}
+
+li:hover { background-position: left bottom; }
+
+.buttonStyle:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.submitButton:hover {
+    background-color: #fff;
+    color: #0d6efd;
+}
+
+.cardStyle { font-weight: 600; }
+
+.lb-outerContainer {
+    width: 648px !important;
+    height: 434px !important;
+}
+
+.lb-outerContainer img {
+    width: 640px !important;
+    height: 426px !important;
+}
+
+.lightbox { top: 60px !important; }
+
+.stylecard .stylemargin:nth-child(n+4) { margin-top: 20px; }

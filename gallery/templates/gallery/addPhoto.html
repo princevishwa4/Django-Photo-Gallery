@@ -1,0 +1,34 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+	<div class="container justify-content-center">
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<div class="card">
+					<form method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="form-group m-3">
+							<label>Upload image</label>
+							<input type="file" class="form-control-file" name="image">
+						</div>
+						<div class="form-group m-3">
+							<label>Select Category</label>
+							<select name="category" class="form-control">
+								<option value="none">Select a category....</option>
+								{% for category in categories %}
+								<option value="{{category.id}}">{{category.name}}</option>
+								{% endfor %}
+							</select>
+						</div>
+						<div class="form-group m-3">
+							<label>Create a new Category</label>
+							<input type="text" class="form-control" placeholder="Create a new Category" name="category_new">
+						</div>
+						<button type="submit" class="btn btn-primary m-3 submitButton">Submit</button>
+						<a href="{% url 'gallery' %}" class="btn btn-dark btn-block m-1 buttonStyle">Back</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
