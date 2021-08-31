@@ -133,3 +133,12 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AWS_QUERYSTRING_AUTH = False 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIAXVA5MHKUM676SP2S'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'django-photo-gallery-bucket'

@@ -8,11 +8,11 @@
 					<form method="POST" enctype="multipart/form-data">
 						{% csrf_token %}
 						<div class="form-group m-3">
-							<label>Upload image</label>
+							<label>Upload image :- </label>
 							<input type="file" class="form-control-file" name="image">
 						</div>
 						<div class="form-group m-3">
-							<label>Select Category</label>
+							<label>Select Category :- </label>
 							<select name="category" class="form-control">
 								<option value="none">Select a category....</option>
 								{% for category in categories %}
@@ -21,7 +21,7 @@
 							</select>
 						</div>
 						<div class="form-group m-3">
-							<label>Create a new Category</label>
+							<label>Create a new Category :- </label>
 							<input type="text" class="form-control" placeholder="Create a new Category" name="category_new">
 						</div>
 						<button type="submit" class="btn btn-primary m-3 submitButton">Submit</button>
